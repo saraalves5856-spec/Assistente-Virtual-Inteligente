@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Assistente virtual de clínica"
+    >
+
+    <title>Assistente da Clínica</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="app">
+
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <div class="logo">
+                    ✚
+                </div>
+
+                <div>
+
+                    <h1>
+                        Assistente da Clínica
+                    </h1>
+
+                    <p>
+                        <span class="status-dot"></span>
+                        Atendimento virtual
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button
+                    id="themeButton"
+                    class="icon-button"
+                    title="Alternar tema"
+                >
+                    ☾
+                </button>
+
+
+                <button
+                    id="newConversationButton"
+                    class="new-button"
+                >
+                    ＋ Nova conversa
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <section class="chat">
+
+            <div
+                id="messages"
+                class="messages"
+            ></div>
+
+
+            <div
+                id="typing"
+                class="typing hidden"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <strong>
+                    Pensando...
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <footer class="composer-area">
+
+
+            <div class="composer">
+
+                <textarea
+                    id="messageInput"
+                    rows="1"
+                    maxlength="4000"
+                    placeholder="Digite sua dúvida sobre saúde ou clínica..."
+                ></textarea>
+
+
+                <button
+                    id="sendButton"
+                    class="send-button"
+                    title="Enviar"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <div class="footer-info">
+
+                <span id="counter">
+                    0 mensagens
+                </span>
+
+                <span>
+                    Enter envia • Shift + Enter quebra linha
+                </span>
+
+                <button
+                    id="clearButton"
+                    class="clear-button"
+                >
+                    Limpar conversa
+                </button>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
