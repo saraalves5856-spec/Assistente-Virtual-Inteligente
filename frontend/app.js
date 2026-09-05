@@ -130,10 +130,9 @@ function updateCounter() {
 
 
     counterEl.textContent =
-        `${count} ${
-            count === 1
-                ? "mensagem"
-                : "mensagens"
+        `${count} ${count === 1
+            ? "mensagem"
+            : "mensagens"
         }`;
 
 }
@@ -372,8 +371,7 @@ async function sendMessage() {
     try {
 
         const response =
-            await fetch(
-                "/api/chat",
+            await fetch("https://assistente-virtual-inteligente-1.onrender.com/api/chat",
                 {
 
                     method: "POST",

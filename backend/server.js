@@ -2,12 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import path from "path";
-import { fileURLToPath } from "url";
 
 dotenv.config();
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -18,9 +14,6 @@ const client = new OpenAI({
 });
 
 app.use(express.json({ limit: "1mb" }));
-
-app.use(express.static(path.join(__dirname, "public")));
-
 
 const SYSTEM_PROMPT = `
 Você é Sara, a Assistente Virtual da Clínica Vida & Saúde.
@@ -162,16 +155,6 @@ app.get("/api/health", (req, res) => {
     });
 
 });
-
-
-app.get("*splat", (req, res) => {
-
-    res.sendFile(
-        path.join(__dirname, "public", "index.html")
-    );
-
-});
-
 
 app.listen(PORT, () => {
 
