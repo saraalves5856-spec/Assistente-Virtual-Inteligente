@@ -605,3 +605,19 @@ applyTheme(
 render();
 
 inputEl.focus();
+
+const quickQuestions = document.querySelectorAll(".quick-question");
+
+quickQuestions.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const question = button.dataset.question;
+
+        messageInput.value = question;
+
+        messageInput.focus();
+
+    });
+
+});

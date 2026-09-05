@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assistente virtual da Clínica Vida & Saúde">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Clínica Vida & Saúde | Assistente Sara</title>
 
-    <meta
-        name="description"
-        content="Assistente virtual de clínica"
-    >
-
-    <title>Assistente da Clínica</title>
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
     <main class="app">
 
-
+        <!-- CABEÇALHO -->
         <header class="topbar">
 
             <div class="brand">
@@ -40,20 +25,15 @@
                 </div>
 
                 <div>
-
-                    <h1>
-                        Assistente da Clínica
-                    </h1>
+                    <h1>Clínica Vida & Saúde</h1>
 
                     <p>
                         <span class="status-dot"></span>
-                        Atendimento virtual
+                        Atendimento virtual disponível
                     </p>
-
                 </div>
 
             </div>
-
 
             <div class="top-actions">
 
@@ -64,7 +44,6 @@
                 >
                     ☾
                 </button>
-
 
                 <button
                     id="newConversationButton"
@@ -78,77 +57,201 @@
         </header>
 
 
-        <section class="chat">
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="main-content">
 
-            <div
-                id="messages"
-                class="messages"
-            ></div>
+            <!-- LATERAL DA CLÍNICA -->
+            <aside class="clinic-sidebar">
+
+                <div class="assistant-profile">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <span class="assistant-label">
+                            Assistente Virtual
+                        </span>
+
+                        <h2>Sara</h2>
+
+                        <p class="online">
+                            ● Online agora
+                        </p>
+                    </div>
+
+                </div>
 
 
-            <div
-                id="typing"
-                class="typing hidden"
-            >
+                <div class="clinic-description">
 
-                <span></span>
-                <span></span>
-                <span></span>
+                    <h3>Olá! Sou a Sara 👋</h3>
 
-                <strong>
-                    Pensando...
-                </strong>
+                    <p>
+                        Sou a assistente virtual da Clínica Vida & Saúde.
+                        Posso orientar você sobre dúvidas relacionadas
+                        à saúde e ao atendimento da clínica.
+                    </p>
 
-            </div>
+                </div>
+
+
+                <div class="services">
+
+                    <h3>Como posso ajudar?</h3>
+
+                    <button
+                        class="quick-question"
+                        data-question="Quero informações sobre consultas."
+                    >
+                        📅 Consultas
+                    </button>
+
+                    <button
+                        class="quick-question"
+                        data-question="Gostaria de informações sobre exames."
+                    >
+                        🧪 Exames
+                    </button>
+
+                    <button
+                        class="quick-question"
+                        data-question="Estou com alguns sintomas e gostaria de orientação."
+                    >
+                        🩺 Sintomas
+                    </button>
+
+                    <button
+                        class="quick-question"
+                        data-question="Quero saber mais sobre prevenção e cuidados com a saúde."
+                    >
+                        ❤️ Prevenção
+                    </button>
+
+                    <button
+                        class="quick-question"
+                        data-question="Gostaria de orientação sobre tratamentos."
+                    >
+                        💊 Tratamentos
+                    </button>
+
+                </div>
+
+
+                <div class="warning-card">
+
+                    <span>⚕️</span>
+
+                    <p>
+                        A Sara oferece orientações gerais e não substitui
+                        uma avaliação realizada por um profissional de saúde.
+                    </p>
+
+                </div>
+
+            </aside>
+
+
+            <!-- CHAT -->
+            <section class="chat-area">
+
+                <div class="chat-header">
+
+                    <div class="mini-avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <h2>Sara</h2>
+
+                        <p>
+                            Assistente Virtual • Clínica Vida & Saúde
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <section class="chat">
+
+                    <div
+                        id="messages"
+                        class="messages"
+                    ></div>
+
+
+                    <div
+                        id="typing"
+                        class="typing hidden"
+                    >
+
+                        <div class="typing-avatar">
+                            S
+                        </div>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <strong>
+                            Sara está digitando...
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CAMPO DE MENSAGEM -->
+                <footer class="composer-area">
+
+                    <div class="composer">
+
+                        <textarea
+                            id="messageInput"
+                            rows="1"
+                            maxlength="4000"
+                            placeholder="Digite sua dúvida para Sara..."
+                        ></textarea>
+
+                        <button
+                            id="sendButton"
+                            class="send-button"
+                            title="Enviar mensagem"
+                        >
+                            ➤
+                        </button>
+
+                    </div>
+
+
+                    <div class="footer-info">
+
+                        <span id="counter">
+                            0 mensagens
+                        </span>
+
+                        <span>
+                            Enter envia • Shift + Enter quebra linha
+                        </span>
+
+                        <button
+                            id="clearButton"
+                            class="clear-button"
+                        >
+                            Limpar conversa
+                        </button>
+
+                    </div>
+
+                </footer>
+
+            </section>
 
         </section>
-
-
-        <footer class="composer-area">
-
-
-            <div class="composer">
-
-                <textarea
-                    id="messageInput"
-                    rows="1"
-                    maxlength="4000"
-                    placeholder="Digite sua dúvida sobre saúde ou clínica..."
-                ></textarea>
-
-
-                <button
-                    id="sendButton"
-                    class="send-button"
-                    title="Enviar"
-                >
-                    ➤
-                </button>
-
-            </div>
-
-
-            <div class="footer-info">
-
-                <span id="counter">
-                    0 mensagens
-                </span>
-
-                <span>
-                    Enter envia • Shift + Enter quebra linha
-                </span>
-
-                <button
-                    id="clearButton"
-                    class="clear-button"
-                >
-                    Limpar conversa
-                </button>
-
-            </div>
-
-        </footer>
-
 
     </main>
 
