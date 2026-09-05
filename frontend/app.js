@@ -371,7 +371,7 @@ async function sendMessage() {
     try {
 
         const response =
-            await fetch("https://assistente-virtual-inteligente-1.onrender.com/api/chat",
+            await fetch("https://assistente-virtual-inteligente-2.onrender.com/api/chat",
                 {
 
                     method: "POST",
@@ -384,14 +384,13 @@ async function sendMessage() {
                     body: JSON.stringify({
 
                         messages:
-                            messages.map(
-                                ({
-                                    role,
-                                    content
-                                }) => ({
-                                    role,
-                                    content
-                                })
+                            messages.map(({
+                                role,
+                                content
+                            }) => ({
+                                role,
+                                content
+                            })
                             )
 
                     })
