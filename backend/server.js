@@ -12,8 +12,11 @@ app.use(express.json({ limit: "1mb" }));
 
 const PORT = process.env.PORT || 3000;
 
+const endpoint="https://turmagpt.services.ai.azure.com/openai/v1"
+
 const client = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+    apiKey: process.env.OPENAI_API_KEY,
+    baseURL: endpoint
 });
 
 
@@ -122,7 +125,6 @@ app.post("/api/chat", async (req, res) => {
 
             max_output_tokens: 500
         });
-
 
         const answer =
             response.output_text?.trim() ||
